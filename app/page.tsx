@@ -1,8 +1,10 @@
+import NavBar from "@/components/NavBar";
 
 export default function Home() {
   return (
-    <div className="flex justify-center items-center h-screen bg-amber-400">
-      HOME
+    <div className="h-screen bg-[var(--color-bg)]">
+      <NavBar/>
+      HOME Sebastián
     </div>
   );
 }

@@ -1,3 +1,11 @@
 @import "tailwindcss";
 
 
+body {
+  font-family: var(--font-montserrat), sans-serif;
+}
+
+:root {
+  --color-bg: #030e1d;
+  --color-navbar: #141C27;
+}
