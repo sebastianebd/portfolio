@@ -54,3 +54,32 @@ body {
   99.99% {margin-top:0px;}
   100% {margin-top:-270px;}
 }
+
+
+
+.path-animate {
+  stroke-dasharray: 500; 
+  stroke-dashoffset: 500;
+  animation: draw 2s forwards;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.path-animate-floating {
+  animation: float 3s linear infinite;
+  transform-origin: 30% 20%;
+}
+
+@keyframes float {
+  0%   { transform: translate(0px, 0px) rotate(0deg); }
+  25%  { transform: translate(2px, -2px) rotate(-1deg); }
+  50%  { transform: translate(0px, -3px) rotate(0deg); }
+  75%  { transform: translate(-2px, 2px) rotate(1deg); }
+  100% { transform: translate(0px, 0px) rotate(0deg); }
+}
+
+
