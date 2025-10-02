@@ -8,15 +8,15 @@ const NavBar = () => {
                     font-bold rounded z-30'>
 
       <div className='bg-amber-500 text-black  flex-shrink-0  w-16 md:w-26 flex items-center justify-center '>
-        <img src="/code-icon.svg" alt="terminal icon" height={35} width={35}/>
+        <img src="/code-icon.svg" alt="terminal icon" className='h-10 w-10 md:h-14 md:w-14 '/>
       </div>
 
-      <div className=' flex justify-center items-center pl-5'>
+      <div className=' flex justify-center items-center pl-5 lg:pr-20'>
         <a href="#home" className='text-md md:text-lg tracking-wider'>SEBASTIÁN</a>
       </div>
 
       {/* Menú Desktop */}
-      <div className='hidden md:flex flex-1 justify-evenly items-center gap-4 sm:gap-4 md:gap-5 lg:gap-7 px-3 '>
+      <div className='hidden md:flex flex-1 justify-evenly items-center gap-4 sm:gap-4 md:gap-5 px-3 '>
         <a href="#home" className=' md:text-base lg:text-lg hover:-translate-y-1.5 transition-all duration-300 hover:rotate-1 hover:text-amber-400'>Home</a>
         <a href="#about" className=' md:text-base lg:text-lg hover:-translate-y-1.5 transition-all duration-300 hover:rotate-1 hover:text-amber-400'>About</a>
         <a href="#projects" className=' md:text-base lg:text-lg hover:-translate-y-1.5 transition-all duration-300 hover:rotate-1 hover:text-amber-400'>Projects</a>

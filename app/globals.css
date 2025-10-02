@@ -26,3 +26,31 @@ body {
   animation: openMenu 0.4s ease-out forwards;
   transform-origin: top;
 }
+
+#flip {
+  height: 75px; 
+  overflow: hidden;
+}
+
+#flip > div:first-child {
+  animation: show 7s linear infinite;
+}
+
+#flip > div > div {
+  display: inline-block;
+  height: 60px;
+  margin-bottom: 30px; 
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+@keyframes show {
+  0% {margin-top:-270px;}
+  5% {margin-top:-180px;}
+  33% {margin-top:-180px;}
+  38% {margin-top:-90px;}
+  66% {margin-top:-90px;}
+  71% {margin-top:0px;}
+  99.99% {margin-top:0px;}
+  100% {margin-top:-270px;}
+}

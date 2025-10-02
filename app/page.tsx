@@ -1,18 +1,21 @@
+import FlipText from "@/components/FlipText";
 import NavBar from "@/components/NavBar";
+import Image from 'next/image';
 
 export default function Home() {
   return (
-    <div className="relative h-screen md:h-170 lg:h-screen bg-[var(--color-bg)] overflow-hidden">
+    <div className="relative h-screen md:h-170 lg:h-screen bg-[var(--color-bg)] overflow-hidden lg:px-60">
       <NavBar/>
       <div className="absolute w-[300%] md:w-[200%] h-110 md:h-80 lg:h-110 bg-[var(--color-fringe)] top-1/2 left-[-30%] rotate-120 z-0"></div>
 
       <div className="relative z-10 flex md:justify-center h-full">
 
-        <div className="text-white lg:w-1/2 h-full flex flex-col lg:justify-center gap-15 lg:gap-20 pt-15 px-5 lg:pl-60 
-                        pb-15 md:px-15 lg:pb-40">
+        <div className="text-white lg:w-1/2 h-full flex flex-col lg:justify-center gap-15 lg:gap-15 pt-15 px-5  
+                        pb-15 lg:pb-40 ">
           
           <h1 className="text-4xl md:text-5xl font-bold leading-snug">
-            HOLA, SOY SEBASTIÁN! <br /> ANALISTA PROGRAMADOR
+            HOLA, SOY SEBASTIÁN! <br /> 
+            <FlipText />
           </h1>
 
           <p className="text-sm md:text-base pr-0 text-gray-500 font-bold">Soy un apasionado diseñador de UI/UX con la misión de crear experiencias digitales atractivas e 
@@ -26,12 +29,19 @@ export default function Home() {
             transition-colors duration-450 h-16 w-50 flex flex-row justify-center items-center">
             Descargar CV <img src="/download-icon.svg" alt="" width={20} height={20} className="ml-2" />
           </a>
-
         </div>
 
-        <div className=" w-1/2 h-full hidden lg:block ">
-          
+        <div className=" w-1/2 h-full hidden lg:flex justify-center pl-40 items-center pb-50">
+        <Image 
+          src={"/profile1.png"}
+          alt="profile img"
+          width={0}
+          height={0}
+          sizes="100vw"
+          className="w-100 h-110  object-cover rounded-lg"
+          />
         </div>
+
       </div>
 
     </div>
