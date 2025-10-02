@@ -10,3 +10,19 @@ body {
   --color-navbar: #141C27;
   --color-fringe: #0f1927;
 }
+
+@keyframes openMenu {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+.animate-openMenu {
+  animation: openMenu 0.4s ease-out forwards;
+  transform-origin: top;
+}
