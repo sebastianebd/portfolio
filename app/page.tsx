@@ -7,7 +7,7 @@ export default function Home() {
   return (
 
     
-    <div className="relative h-screen md:h-170 lg:h-screen bg-[var(--color-bg)] overflow-hidden lg:px-20 xl:px-60">
+    <div className="relative lg:width-full h-screen md:h-170 lg:h-screen bg-[var(--color-bg)] overflow-hidden lg:px-20 xl:px-60">
       <NavBar/>
 
       {/* Fringe BG */}
@@ -15,7 +15,7 @@ export default function Home() {
 
 
       {/* Contenedor columnas */}
-      <div className="relative z-10 flex md:justify-center h-full">
+      <div className="relative z-10 flex md:justify-content h-full ">
 
 
         {/* Columna izquierda */}
@@ -24,7 +24,7 @@ export default function Home() {
           
           <h1 className="text-4xl md:text-5xl font-bold leading-snug">
             HOLA, SOY SEBASTIÁN! <br /> 
-            <FlipText />
+            <FlipText/>
           </h1>
 
           <p className="text-sm md:text-base pr-0 text-gray-500 font-bold">Soy un apasionado diseñador de UI/UX con la misión de crear experiencias digitales atractivas e 
@@ -42,7 +42,7 @@ export default function Home() {
 
 
         {/* Columna derecha */}
-        <div className=" lg:flex-1 h-full hidden lg:flex  pb-50 justify-center">
+        <div className=" lg:flex-1 h-full hidden lg:flex  pb-50 justify-center ">
 
 
           <div className="relative flex items-center">
