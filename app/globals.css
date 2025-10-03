@@ -58,9 +58,9 @@ body {
 
 
 .path-animate {
-  stroke-dasharray: 500; 
-  stroke-dashoffset: 500;
-  animation: draw 2s forwards;
+  stroke-dasharray: 900; 
+  stroke-dashoffset: 900;
+  animation: draw 3s forwards;
 }
 
 @keyframes draw {
@@ -71,7 +71,7 @@ body {
 
 .path-animate-floating {
   animation: float 3s linear infinite;
-  transform-origin: 30% 20%;
+  transform-origin: 0% 50%;
 }
 
 @keyframes float {

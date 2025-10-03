@@ -5,14 +5,22 @@ import Image from 'next/image';
 
 export default function Home() {
   return (
-    <div className="relative h-screen md:h-170 lg:h-screen bg-[var(--color-bg)] overflow-hidden lg:px-60">
+
+    
+    <div className="relative h-screen md:h-170 lg:h-screen bg-[var(--color-bg)] overflow-hidden lg:px-20 xl:px-60">
       <NavBar/>
+
+      {/* Fringe BG */}
       <div className="absolute w-[300%] md:w-[200%] h-110 md:h-80 lg:h-110 bg-[var(--color-fringe)] top-1/2 left-[-30%] rotate-120 z-0"></div>
 
+
+      {/* Contenedor columnas */}
       <div className="relative z-10 flex md:justify-center h-full">
 
-        <div className="text-white lg:w-1/2 h-full flex flex-col lg:justify-center gap-15 lg:gap-15 pt-15 px-5  
-                        pb-15 lg:pb-40 ">
+
+        {/* Columna izquierda */}
+        <div className="text-white lg:flex-1 h-full flex flex-col  lg:justify-center gap-15 lg:gap-15 pt-15 px-5 lg:px-0  
+                        pb-15 lg:pb-40">
           
           <h1 className="text-4xl md:text-5xl font-bold leading-snug">
             HOLA, SOY SEBASTIÁN! <br /> 
@@ -32,49 +40,50 @@ export default function Home() {
           </a>
         </div>
 
-        <div className=" w-1/2 h-full hidden lg:flex justify-center pl-40 items-center pb-50">
+
+        {/* Columna derecha */}
+        <div className=" lg:flex-1 h-full hidden lg:flex  pb-50 justify-center">
 
 
-      <div className="w-150 h-150 relative">
-        {/* Marco poligonal complejo */}
-        <svg viewBox="0 0 400 400" className="w-full h-full absolute top-0 left-0">
+          <div className="relative flex items-center">
 
-          <defs>
-            <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-              <feDropShadow dx="0" dy="0" stdDeviation="3" floodColor="#e08916" />
-            </filter>
-          </defs>
+            <div className="pl-35 pt-20">
 
-      <g className="path-animate-floating">
-          <path
-          className="path-animate"
-            d="m230 12 122 71c11 7 27 23 26 48v32l0 77m-206-230c21-11 41-9 58 2m-58-2-120 70c-19 10-29 26-30 49v34l0 74m30 84c38.3333 22 76.6667 44 115 66 21 13 46 14 69-1l116-68c16-10 27-31 26-53v-28m-326 84c-17-10-31-33-30-57v-27"
-            fill="none"
-            stroke="#e08916"  /* color del marco */
-            strokeWidth="5"
-            filter="url(#glow)"
-          />
-        </g>
-        </svg>
+            <Image
+              src="/profile1.png"
+              alt="profile img"
+              width={500}
+              height={450}
+              className="z-10 xl:width-[500px] xl:height-[450px] xl:min-w-[500px] xl:min-h-[450px]
+                        lg:width-[400px] lg:height-[350px] lg:min-w-[400px] lg:min-h-[350px]" 
 
-        {/* Imagen centrada */}
-        <Image
-          src="/profile1.png"
-          alt="profile img"
-          width={500}
-          height={450}
-          className=" z-10 pl-15 pt-15" // deja espacio para el marco
-        />
-      </div>
+            />
+            </div>
+            
+            <svg viewBox="0 0 360 360" 
+                  className="absolute overflow-visible pl-21 pt-4">
 
+              <defs>
+                <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+                  <feDropShadow dx="0" dy="1" stdDeviation="6" floodColor="#e08916" />
+                </filter>
+              </defs>
 
+          <g className="path-animate-floating">
+              <path
+              className="path-animate"
+                d="m230 12 122 71c11 7 27 23 26 48v32l0 77m-206-230c21-11 41-9 58 2m-58-2-120 70c-19 10-29 26-30 49v34l0 74m30 84c38.3333 22 76.6667 44 115 66 21 13 46 14 69-1l116-68c16-10 27-31 26-53v-28m-326 84c-17-10-31-33-30-57v-27"
+                fill="none"
+                stroke="#e08916" 
+                strokeWidth="5"
+                filter="url(#glow)"
+              />
+            </g>
+            </svg>
 
             
-            
-
-
+          </div>
         </div>
-        
       </div>
     </div>
   );
