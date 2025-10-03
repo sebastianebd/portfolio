@@ -9,10 +9,10 @@ const FlipText = () => {
           <div className="text-amber-500">PROGRAMADOR</div>
         </div>
         <div>
-          <div className="text-amber-500">FRONT END DEV</div>
+          <div className="text-amber-500">CODE LOVER</div>
         </div>
         <div>
-          <div className="text-amber-500">BACKEND DEV</div>
+          <div className="text-amber-500">ENTUSIASTA</div>
         </div>
       </div>
     </div>
