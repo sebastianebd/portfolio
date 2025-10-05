@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 
+
 body {
   font-family: var(--font-montserrat), sans-serif;
 }
@@ -27,23 +28,49 @@ body {
   transform-origin: top;
 }
 
-#flip {
-  height: 100px; 
-  overflow: hidden;
+
+/* Animaciones de flip 3D */
+@layer utilities {
+  .flip-container {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+
+  @keyframes flip-in {
+    0% {
+      transform: rotateX(-90deg) translateZ(35px);
+      opacity: 0;
+    }
+    100% {
+      transform: rotateX(0deg) translateZ(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes flip-out {
+    0% {
+      transform: rotateX(0deg) translateZ(0);
+      opacity: 1;
+    }
+    100% {
+      transform: rotateX(90deg) translateZ(-35px);
+      opacity: 0;
+    }
+  }
+
+  .flip-in-animation {
+    animation: flip-in 0.8s ease-out forwards;
+  }
+
+  .flip-out-animation {
+    animation: flip-out 0.8s ease-in forwards;
+  }
 }
 
-#flip > div:first-child {
-  animation: show 7s linear infinite;
-}
-
-#flip > div > div {
-  display: flex;
-  align-items: center;
-  height: 80px;
-  margin-bottom: 5px; 
-  font-weight: bold;
-  text-transform: uppercase;
-}
 
 @keyframes show {
   0% {margin-top:-270px;}
@@ -61,7 +88,7 @@ body {
 .path-animate {
   stroke-dasharray: 1200; 
   stroke-dashoffset: 1200;
-  animation: draw 3s linear forwards;
+  animation: draw 500ms linear forwards;
 }
 
 @keyframes draw {
