@@ -6,18 +6,18 @@ export default function Home() {
   return (
 
     
-    <section className="relative lg:width-full h-screen md:h-170 lg:h-screen bg-[var(--color-bg)] overflow-hidden justify-between lg:px-10 pt-20 lg:pt-40 bg">
+    <section className="relative  h-screen md:h-170 lg:h-screen bg-[var(--color-bg)] overflow-hidden justify-between lg:px-15 pt-20 xl:pt-70 lg:pt-50 ">
       
       {/* Fringe BG */}
       <div className="absolute w-[300%] md:w-[200%] h-110 md:h-80 lg:h-110 bg-[var(--color-fringe)] top-1/2 left-[-30%] rotate-120 z-0"></div>
 
       {/* Contenedor columnas */}
-      <div className="relative z-10 flex md:justify-content h-full max-w-screen-xl lg:min-w-230 lg:max-w-320 mx-auto  ">
+      <div className="relative z-10 flex md:justify-content  max-w-150 md:max-w-250 lg:max-w-320 mx-auto ">
 
 
         {/* Columna izquierda */}
-        <div className="text-white lg:flex-1 h-full flex flex-col  lg:justify-center  lg:gap-0 pt-15 lg:pt-0 px-5 lg:px-0  
-                        pb-15 lg:pb-40">
+        <div className="text-white lg:flex-1 h-full flex flex-col lg:justify-center lg:gap-0 pt-15 lg:pt-0 px-5 lg:px-0  
+                        pb-15 lg:pb-40 md:px-15">
           
           <h1 className="text-4xl md:text-5xl font-bold leading-snug">
             HOLA, SOY <br/> 
@@ -25,7 +25,9 @@ export default function Home() {
             <FlipText/>
           </h1>
 
-          <p className="text-sm md:text-base pr-0 text-gray-500 font-bold pb-10 lg:w-115 xl:w-full">Soy un apasionado diseñador de UI/UX con la misión de crear experiencias digitales atractivas e 
+          <p className="text-sm md:text-base pr-0 text-gray-500 font-bold pb-10 md:w-full lg:w-115 xl:w-full 
+                        ">
+            Soy un apasionado diseñador de UI/UX con la misión de crear experiencias digitales atractivas e 
             intuitivas. Con una sólida base en principios de diseño y un ojo para el detalle, 
             me especializo en convertir ideas complejas en interfaces intuitivas que cautivan y enganchan.</p>
 
