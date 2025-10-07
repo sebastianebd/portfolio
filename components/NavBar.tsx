@@ -7,7 +7,7 @@ const NavBar = () => {
     
     <nav className='fixed top-0 left-0 w-full z-30 flex justify-center'>
       <div className='fixed top-0 h-15 md:h-20 w-full max-w-7xl mx-auto flex bg-[var(--color-navbar)] text-white 
-                      font-bold rounded z-30'>
+                      font-bold  z-30'>
 
         <div className='bg-amber-500 text-black  flex-shrink-0  w-16 md:w-26 flex items-center justify-center '>
           <img src="/code-icon.svg" alt="terminal icon" className='h-10 w-10 md:h-14 md:w-14 '/>

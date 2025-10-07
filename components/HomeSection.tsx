@@ -6,7 +6,7 @@ export default function Home() {
   return (
 
     
-    <section className="relative  h-screen md:h-170 lg:h-screen bg-[var(--color-bg)] overflow-hidden justify-between lg:px-15 pt-20 xl:pt-70 lg:pt-50 ">
+    <section className="relative flex h-screen md:h-170 lg:h-screen bg-[var(--color-bg)] overflow-hidden justify-between lg:px-15 xl:pt-60 lg:pt-50 items-center">
       
       {/* Fringe BG */}
       <div className="absolute w-[300%] md:w-[200%] h-110 md:h-80 lg:h-110 bg-[var(--color-fringe)] top-1/2 left-[-30%] rotate-120 z-0"></div>
@@ -16,7 +16,7 @@ export default function Home() {
 
 
         {/* Columna izquierda */}
-        <div className="text-white lg:flex-1 h-full flex flex-col lg:justify-center lg:gap-0 pt-15 lg:pt-0 px-5 lg:px-0  
+        <div className="text-white lg:flex-1 h-full flex flex-col lg:justify-center lg:gap-0 lg:pt-0 px-5 lg:px-0  
                         pb-15 lg:pb-40 md:px-15">
           
           <h1 className="text-4xl md:text-5xl font-bold leading-snug">
