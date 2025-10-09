@@ -4,6 +4,7 @@ import NavBar from "@/components/NavBar";
 import HomeSection from  "@/components/HomeSection"
 import AboutSection from  "@/components/AboutSection"
 import ProyectsSection from  "@/components/ProyectsSection"
+import ContactSection from  "@/components/ContactSection"
 
 export default function page() {
   return (
@@ -12,7 +13,9 @@ export default function page() {
       <NavBar/>
       <HomeSection/>
       <AboutSection/>
-      <ProyectsSection/>
+      <ContactSection/>
+      
+
     </main>
   )
     
