@@ -5,6 +5,7 @@ import AnimatedImage from "./ImageMotion";
 const AboutSection = () => {
   return (
     <section
+      id="about"
       className="relative h-auto md:h-auto lg:h-190 bg-black overflow-hidden justify-between lg:px-15
                           flex"
     >

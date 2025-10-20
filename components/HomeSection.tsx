@@ -4,12 +4,14 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <section className="relative flex h-screen md:h-170 lg:h-screen bg-[var(--color-bg)] overflow-hidden justify-between lg:px-15 xl:pt-60 lg:pt-50 items-center">
+    <section 
+      id="home"
+      className="relative flex h-screen md:h-170 lg:h-screen bg-[var(--color-bg)] overflow-hidden justify-between md:pt-15 lg:px-15 xl:pt-60 lg:pt-50 items-center">
       {/* Fringe BG */}
       <div className="absolute w-[300%] md:w-[195%] h-110 md:h-80 lg:h-130 bg-[var(--color-fringe)] top-1/2 left-[-30%] rotate-120 z-0"></div>
 
       {/* Contenedor columnas */}
-      <div className="relative z-10 flex md:justify-content  max-w-150 md:max-w-250 lg:max-w-360 mx-auto ">
+      <div className="relative z-10 flex lg:justify-between  max-w-150 md:max-w-250 lg:max-w-360 lg:mx-auto   ">
         {/* Columna izquierda */}
         <div
           className="text-white lg:flex-1 h-full flex flex-col lg:justify-center lg:gap-0 lg:pt-0 px-5 lg:px-0  
@@ -50,7 +52,7 @@ export default function Home() {
         </div>
 
         {/* Columna derecha */}
-        <div className=" lg:flex-1 h-full hidden lg:flex  pb-50 justify-end  ">
+        <div className=" lg:flex-1 h-full hidden lg:flex lg:pl-10 pb-50 justify-end ">
           <div className="relative flex items-center">
             <div className="">
               <Image

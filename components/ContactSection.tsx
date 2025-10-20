@@ -137,6 +137,7 @@ const ContactSection = () => {
 
   return (
     <section
+      id="contact"
       className=" relative min-h-screen md:h-auto lg:h-full bg-black overflow-hidden justify-between lg:px-15 px-5
                         lg:flex-row"
     >

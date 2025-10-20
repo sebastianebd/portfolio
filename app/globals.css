@@ -16,6 +16,9 @@ select:-webkit-autofill:focus {
   caret-color: white !important;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: var(--font-montserrat), sans-serif;
