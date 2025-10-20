@@ -3,10 +3,14 @@ import React, { useState } from 'react';
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const TextStyle = 'hover:-translate-y-1.5 transition-all duration-300 hover:rotate-1 hover:text-amber-400'
   return (
     
+    
+
     <nav className='fixed top-0 left-0 w-full z-30 flex justify-center'>
-      <div className='fixed top-0 h-15 md:h-20 w-full max-w-7xl mx-auto flex bg-[var(--color-navbar)] text-white 
+      
+      <div className='fixed top-0 h-15 md:h-20 w-full max-w-360 mx-auto flex bg-[var(--color-navbar)] text-white 
                       font-bold  z-30'>
 
         <div className='bg-amber-500 text-black  flex-shrink-0  w-16 md:w-26 flex items-center justify-center '>
@@ -19,10 +23,10 @@ const NavBar = () => {
 
         {/* Menú Desktop */}
         <div className='hidden md:flex flex-1 justify-evenly items-center gap-4 sm:gap-4 md:gap-5 px-3 '>
-          <a href="#home" className=' md:text-base lg:text-lg hover:-translate-y-1.5 transition-all duration-300 hover:rotate-1 hover:text-amber-400'>Home</a>
-          <a href="#about" className=' md:text-base lg:text-lg hover:-translate-y-1.5 transition-all duration-300 hover:rotate-1 hover:text-amber-400'>About</a>
-          <a href="#projects" className=' md:text-base lg:text-lg hover:-translate-y-1.5 transition-all duration-300 hover:rotate-1 hover:text-amber-400'>Projects</a>
-          <a href="#contact" className=' md:text-base lg:text-lg hover:-translate-y-1.5 transition-all duration-300 hover:rotate-1 hover:text-amber-400'>Contact</a>
+          <a href="#home" className={TextStyle}>Home</a>
+          <a href="#about" className={TextStyle}>About</a>
+          <a href="#projects" className={TextStyle}>Projects</a>
+          <a href="#contact" className={TextStyle}>Contact</a>
         </div>
 
         {isOpen && (

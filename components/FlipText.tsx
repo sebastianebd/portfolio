@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 
-const WORDS = ['PROGRAMADOR', 'CODE LOVER', 'ENTUSIASTA'];
+const WORDS = ['PROGRAMADOR', 'CODELOVER', 'ENTUSIASTA'];
 const DURATION = 3000;
 
 const FlipText: React.FC = () => {
@@ -19,7 +19,7 @@ const FlipText: React.FC = () => {
   const prevWord = WORDS[prevWordIndex];
 
   return (
-    <div className="relative inline-block flip-container w-[22.5rem] h-20 pb-12 font-extrabold text-4xl md:text-5xl text-amber-500 pt-2 ">
+    <div className="relative inline-block flip-container w-[22.5rem] h-20 pb-12 font-extrabold text-4xl md:text-5xl xl:text-7xl text-amber-500 pt-2 ">
       <FlipItem key={prevWord + 'out'} text={prevWord} isExiting={true} isCurrent={prevWord === currentWord} />
       <FlipItem key={currentWord + 'in'} text={currentWord} isExiting={false} isCurrent={true} />
     </div>

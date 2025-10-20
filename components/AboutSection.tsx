@@ -1,16 +1,15 @@
 import React from 'react'
-import Image from 'next/image';
 import AnimatedTitle from './TitleMotion';
 import AnimatedImage from './ImageMotion';
 
 const AboutSection = () => {
   return (
   
-      <section className="relative h-auto md:h-auto lg:h-screen bg-black overflow-hidden justify-between lg:px-15
+      <section className="relative h-auto md:h-auto lg:h-190 bg-black overflow-hidden justify-between lg:px-15
                           flex">
 
-          <div className="relative lg:w-full flex h-full lg:h-full lg:max-w-320 md:max-w-250 max-w-150 mx-auto flex-col
-                          lg:flex-row  ">
+          <div className="relative lg:w-full flex h-full lg:h-full lg:max-w-360 md:max-w-250 max-w-150 mx-auto flex-col
+                          lg:flex-row xl:mt-20  ">
 
             <div className='pt-6 md:pt-16 md:px-15 lg:px-0 px-5 pb-10 lg:max-w-150 lg:flex-col lg:pr-3'>
               <h1 className='text-amber-500 text-xl font-medium tracking-wide'>ABOUT ME</h1>
