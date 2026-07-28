@@ -28,7 +28,7 @@ const validationSchema = yup
       .string()
       .trim()
       .email(
-        "El formato del correo electrónico no es válido. Ej: usuario@dominio.com"
+        "El formato del correo electrónico no es válido. Ej: usuario@dominio.com",
       )
       .required("Por favor ingresa un correo electrónico.")
       .max(50),
@@ -37,7 +37,7 @@ const validationSchema = yup
       .trim()
       .matches(
         phoneRegExp,
-        "El número de teléfono no es válido. Debe incluir al menos 7 dígitos."
+        "El número de teléfono no es válido. Debe incluir al menos 7 dígitos.",
       )
       .min(7, "El teléfono debe tener al menos 7 dígitos.")
       .max(20)
@@ -94,7 +94,7 @@ const ContactSection = () => {
             draggable: true,
             theme: "light",
             toastClassName: "!bg-amber-500",
-          } as CustomToastOptions
+          } as CustomToastOptions,
         );
 
         reset();
@@ -104,7 +104,7 @@ const ContactSection = () => {
           {
             position: "top-right",
             theme: "light",
-          }
+          },
         );
       }
     } catch (error) {
@@ -119,7 +119,7 @@ const ContactSection = () => {
   };
 
   const inputClass = (name: keyof FormInputs) => `
-    focus:outline-none focus:ring-0 pb-5 bg-transparent border-none
+    focus:outline-none focus:ring-0 pb-5 bg-transparent border-none peer
     ${
       errors[name]
         ? "border-red-500 border-b-2 text-red-500 placeholder-red-400"
@@ -128,7 +128,9 @@ const ContactSection = () => {
   `;
 
   const dividerClass = (name: keyof FormInputs) => `
-    h-[0.1px] w-full mb-4 ${errors[name] ? "bg-red-500" : "bg-gray-700"}
+    h-[2px] w-full mb-4 transition-colors duration-300 ${
+      errors[name] ? "bg-red-500" : "bg-gray-700 peer-focus:bg-amber-500"
+    }
   `;
 
   const errorTextClass = "text-red-500 text-sm mt-[-10px] mb-0";
@@ -138,12 +140,12 @@ const ContactSection = () => {
   return (
     <section
       id="contact"
-      className=" relative min-h-screen md:h-auto lg:h-full bg-black overflow-hidden justify-between lg:px-15 px-5
+      className=" relative min-h-screen md:h-auto lg:h-full bg-black overflow-hidden justify-between lg:px-15 px-5 pb-20
                         lg:flex-row"
     >
       {/* Lado Izquierdo - Título e info */}
       <div className=" pt-14 flex flex-col items-center text-center lg:text-left w-full ">
-        <h1 className="text-amber-500 text-xl font-semibold tracking-wide">
+        <h1 className="text-amber-500 text-xl xl:text-2xl font-semibold tracking-wide">
           CONTACT ME
         </h1>
         <p className="text-white text-4xl font-bold pt-8 max-w-[400px] lg:max-w-full 2xl:text-5xl pb-5">
@@ -215,7 +217,7 @@ const ContactSection = () => {
                 placeholder="Mensaje"
                 {...register("message")}
                 className={`focus:outline-none focus:ring-0 pb-20 resize-none bg-transparent ${inputClass(
-                  "message"
+                  "message",
                 )} w-full`}
                 rows={5}
                 maxLength={300}

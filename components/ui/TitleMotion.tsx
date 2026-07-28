@@ -37,9 +37,13 @@ const AnimatedTitle: React.FC<AnimatedTitleProps> = ({ text }) => {
       initial="hidden"
       animate={controls}
     >
-      {text.split('').map((char, index) => (
-        <motion.span key={index} variants={letter}>
-          {char === ' ' ? '\u00A0' : char}
+      {text.split(' ').map((word, wordIndex) => (
+        <motion.span key={wordIndex} className="inline-block mr-[0.25em]">
+          {word.split('').map((char, charIndex) => (
+            <motion.span key={`${wordIndex}-${charIndex}`} variants={letter} className="inline-block">
+              {char}
+            </motion.span>
+          ))}
         </motion.span>
       ))}
     </motion.h2>
