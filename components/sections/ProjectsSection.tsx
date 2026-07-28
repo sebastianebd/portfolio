@@ -45,7 +45,7 @@ const ProjectCard = ({ project, index }: { project: Project, index: number }) =>
       transition={{ duration: 0.7, delay: index * 0.15, ease: [0.16, 1, 0.3, 1] }}
       className={`group block w-full ${project.offset ? 'md:mt-32' : ''}`}
     >
-      <div className="relative w-full aspect-[4/5] mb-6 overflow-hidden bg-[var(--color-navbar)]">
+      <div className="relative w-full aspect-[4/3] md:aspect-[4/5] mb-6 overflow-hidden bg-[var(--color-navbar)]">
         {/* Utilizamos img normal temporalmente para admitir placeholders de Picsum sin modificar next.config.ts */}
         <img 
           src={project.image}

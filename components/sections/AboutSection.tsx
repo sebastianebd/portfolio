@@ -39,7 +39,7 @@ const AboutSection = () => {
           <div
             className="relative 
                                 w-[86vw] h-[110vw] max-w-[356px] max-h-[413px] 
-                                md:w-[50vw] md:h-[65vw]
+                                md:w-[50vw] md:h-[65vw] md:max-w-[400px] md:max-h-[500px]
                                 lg:w-[40vw] lg:h-[48vw] lg:max-w-[410px]  lg:max-h-[491px]  "
           >
             <AnimatedImage

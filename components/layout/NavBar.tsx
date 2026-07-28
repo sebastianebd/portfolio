@@ -45,14 +45,14 @@ const NavBar = () => {
         {isOpen && (
           <>
             <div
-              className="fixed inset-0 backdrop-blur-xs"
+              className="fixed inset-0 backdrop-blur-sm bg-black/50 z-40"
               onClick={() => setIsOpen(false)} // Cerrar al hacer click afuera
             ></div>
 
             {/* Menú Mobile */}
             <div
               className="absolute top-full left-0 w-full bg-[var(--color-bg)] flex flex-col items-center 
-                            py-4 md:hidden border-t border-b border-amber-500 animate-openMenu"
+                            py-4 md:hidden border-t border-b border-amber-500 animate-openMenu z-50"
             >
               <a
                 href="#home"

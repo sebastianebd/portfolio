@@ -140,7 +140,7 @@ const ContactSection = () => {
   return (
     <section
       id="contact"
-      className=" relative min-h-screen md:h-auto lg:h-full bg-black overflow-hidden justify-between lg:px-15 px-5 pb-20
+      className=" relative h-auto bg-black overflow-hidden justify-between lg:px-15 px-5 pb-20
                         lg:flex-row"
     >
       {/* Lado Izquierdo - Título e info */}
@@ -245,7 +245,7 @@ const ContactSection = () => {
           <ToastContainer />
         </div>
 
-        <div className="pb-15 lg:pb-0 lg:mt-10 lg:h-auto lg:flex lg:flex-1 lg:ml-5 lg:max-w-[460px]">
+        <div className="pb-15 h-[350px] md:h-[450px] lg:pb-0 lg:mt-10 lg:h-auto lg:flex lg:flex-1 lg:ml-5 lg:max-w-[460px]">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30052.267416559247!2d-73.19107917722563!3d-40.590446394915375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x961636a5d0f98f11%3A0xd48ddb618b434a73!2sBeethoven%201018%2C%205301969%20Osorno%2C%20Los%20Lagos!5e0!3m2!1ses-419!2scl!4v1759967598500!5m2!1ses-419!2scl"
             width="100%"

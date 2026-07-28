@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <section
       id="home"
-      className="relative flex h-screen md:h-170 lg:h-screen bg-[var(--color-bg)] overflow-hidden justify-between md:pt-15 lg:px-15 xl:pt-60 lg:pt-50 items-center"
+      className="relative flex min-h-[100dvh] md:h-170 lg:h-screen bg-[var(--color-bg)] overflow-hidden justify-between md:pt-15 lg:px-15 xl:pt-60 lg:pt-50 items-center"
     >
       {/* Fringe BG */}
       <div className="absolute w-[300%] md:w-[195%] h-110 md:h-80 lg:h-130 bg-[var(--color-fringe)] top-1/2 left-[-30%] rotate-120 z-0"></div>
