@@ -1,124 +1,14 @@
 "use client";
 import React from "react";
-import { useState } from "react";
-import { ToastContainer, toast, ToastOptions } from "react-toastify";
-
-import { useForm, SubmitHandler } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
-import * as yup from "yup";
-
-interface FormInputs {
-  name: string;
-  email: string;
-  phone: string;
-  message: string;
-}
-
-const phoneRegExp =
-  /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
-
-const validationSchema = yup
-  .object({
-    name: yup
-      .string()
-      .trim()
-      .required("Por favor completa este campo.")
-      .max(50),
-    email: yup
-      .string()
-      .trim()
-      .email(
-        "El formato del correo electrónico no es válido. Ej: usuario@dominio.com",
-      )
-      .required("Por favor ingresa un correo electrónico.")
-      .max(50),
-    phone: yup
-      .string()
-      .trim()
-      .matches(
-        phoneRegExp,
-        "El número de teléfono no es válido. Debe incluir al menos 7 dígitos.",
-      )
-      .min(7, "El teléfono debe tener al menos 7 dígitos.")
-      .max(20)
-      .required("Por favor ingresa un numero de teléfono."),
-    message: yup
-      .string()
-      .trim()
-      .required("El mensaje es obligatorio.")
-      .min(20, "El mensaje debe tener al menos 20 caracteres.")
-      .max(300),
-  })
-  .required();
+import { ToastContainer } from "react-toastify";
+import { useContactForm } from "@/hooks/useContactForm";
+import { ContactFormInputs } from "@/lib/validations/contactSchema";
 
 const ContactSection = () => {
-  const [loading, setLoading] = useState(false);
+  const { register, handleSubmit, errors, loading, buttonDisabled } = useContactForm();
 
-  const {
-    register,
-    handleSubmit,
-    formState: { errors, isValid, isDirty },
-    reset,
-  } = useForm<FormInputs>({
-    resolver: yupResolver(validationSchema),
-    mode: "onTouched",
-  });
 
-  interface CustomToastOptions extends ToastOptions {
-    toastClassName?: string;
-  }
-
-  const onSubmit: SubmitHandler<FormInputs> = async (formData) => {
-    setLoading(true);
-
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-
-      const data = await res.json();
-
-      if (data.ok) {
-        toast.success(
-          "Mensaje enviado correctamente. ¡Pronto me pondré en contacto!",
-          {
-            position: "top-right",
-            autoClose: 3000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: false,
-            draggable: true,
-            theme: "light",
-            toastClassName: "!bg-amber-500",
-          } as CustomToastOptions,
-        );
-
-        reset();
-      } else {
-        toast.error(
-          "Ocurrió un error al enviar el mensaje. Intenta nuevamente más tarde.",
-          {
-            position: "top-right",
-            theme: "light",
-          },
-        );
-      }
-    } catch (error) {
-      console.error("Error durante la solicitud de contacto:", error);
-      toast.error("Error de red o servidor. Por favor, revisa tu conexión.", {
-        position: "top-right",
-        theme: "light",
-      });
-    }
-
-    setLoading(false);
-  };
-
-  const inputClass = (name: keyof FormInputs) => `
+  const inputClass = (name: keyof ContactFormInputs) => `
     focus:outline-none focus:ring-0 pb-5 bg-transparent border-none peer
     ${
       errors[name]
@@ -127,7 +17,7 @@ const ContactSection = () => {
     }
   `;
 
-  const dividerClass = (name: keyof FormInputs) => `
+  const dividerClass = (name: keyof ContactFormInputs) => `
     h-[2px] w-full mb-4 transition-colors duration-300 ${
       errors[name] ? "bg-red-500" : "bg-gray-700 peer-focus:bg-amber-500"
     }
@@ -135,7 +25,6 @@ const ContactSection = () => {
 
   const errorTextClass = "text-red-500 text-sm mt-[-10px] mb-0";
 
-  const buttonDisabled = loading || !isValid || (isDirty && !isValid);
 
   return (
     <section
@@ -163,7 +52,7 @@ const ContactSection = () => {
                           "
         >
           <form
-            onSubmit={handleSubmit(onSubmit)}
+            onSubmit={handleSubmit}
             className="flex flex-col pt-5 text-lg"
           >
             <div className="pb-20">
