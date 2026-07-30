@@ -12,7 +12,7 @@ export default function Home() {
       <div className="absolute w-[300%] md:w-[195%] h-110 md:h-80 lg:h-130 bg-[var(--color-fringe)] top-1/2 left-[-30%] rotate-120 z-0"></div>
 
       {/* Contenedor columnas */}
-      <div className="relative z-10 flex lg:justify-between  max-w-150 md:max-w-250 lg:max-w-360 lg:mx-auto   ">
+      <div className="relative z-10 flex lg:justify-between  max-w-150 md:max-w-250 lg:max-w-360 lg:mx-auto">
         {/* Columna izquierda */}
         <div
           className="text-white lg:flex-1 h-full flex flex-col lg:justify-center lg:gap-0 lg:pt-0 px-5 lg:px-0  
@@ -33,7 +33,7 @@ export default function Home() {
           </p>
 
           <a
-            href="/CV_Sebastian.pdf"
+            href="/CV Sebastian Barria - Fullstack.pdf"
             download
             className="bg-amber-500 hover:bg-[var(--color-navbar)] hover:text-white text-black font-bold 
             transition-colors duration-450 h-16 w-50 flex flex-row justify-center items-center "
@@ -59,8 +59,18 @@ export default function Home() {
                 width={0}
                 height={0}
                 sizes="100vw"
+                style={{ 
+                  WebkitMaskImage: "url('/hex-mask.svg')", 
+                  WebkitMaskSize: "contain", 
+                  WebkitMaskPosition: "center", 
+                  WebkitMaskRepeat: "no-repeat",
+                  maskImage: "url('/hex-mask.svg')", 
+                  maskSize: "contain", 
+                  maskPosition: "center", 
+                  maskRepeat: "no-repeat"
+                }}
                 className="z-10 xl:w-[480px] xl:h-[515px] xl:min-w-[480px] xl:min-h-[515px]
-                        lg:w-[430px] lg:h-[470px] lg:min-w-[400px] lg:min-h-[430px]"
+                        lg:w-[430px] lg:h-[470px] lg:min-w-[400px] lg:min-h-[430px] object-cover"
               />
             </div>
 
